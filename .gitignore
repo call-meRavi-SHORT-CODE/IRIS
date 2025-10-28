@@ -1,0 +1,82 @@
+# ------------------------------
+# Python
+# ------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pdb
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# ------------------------------
+# Virtual Environments
+# ------------------------------
+env/
+venv/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# ------------------------------
+# IDE / Editor Files
+# ------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ------------------------------
+# OS-specific Files
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# Logs and Cache
+# ------------------------------
+*.log
+logs/
+*.tmp
+*.bak
+.cache/
+.pytest_cache/
+.mypy_cache/
+__snapshots__/
+
+# ------------------------------
+# Environment Variables
+# ------------------------------
+.env
+.env.*
+config.json
+config.yaml
+config.yml
+*.ini
+*.toml
+
+# ------------------------------
+# Build / Distribution
+# ------------------------------
+build/
+dist/
+*.egg-info/
+
+# ------------------------------
+# Jupyter / Notebooks
+# ------------------------------
+.ipynb_checkpoints
+
+# ------------------------------
+# Misc
+# ------------------------------
+*.sqlite3
+*.db
+*.pdf
+*.csv
+*.xlsx
+*.json
