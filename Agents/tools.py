@@ -51,3 +51,84 @@ def open_calculator() -> str:
         return "IRIS <-- Opening Calculator..."
     except Exception as e:
         return f"Failed to open Calculator: {str(e)}"
+
+
+# Tool to open File Explorer
+@tool
+def open_file_explorer() -> str:
+    """Opens File Explorer."""
+    try:
+        os.system("start explorer")
+        return "IRIS <-- Opening File Explorer..."
+    except Exception as e:
+        return f"Failed to open File Explorer: {str(e)}"
+
+# Tool to open Windows Settings
+@tool
+def open_settings() -> str:
+    """Opens Windows Settings."""
+    try:
+        os.system("start ms-settings:")
+        return "IRIS <-- Opening Settings..."
+    except Exception as e:
+        return f"Failed to open Settings: {str(e)}"
+
+# Tool to open Task Manager
+@tool
+def open_task_manager() -> str:
+    """Opens Task Manager."""
+    try:
+        os.system("taskmgr")
+        return "IRIS <-- Opening Task Manager..."
+    except Exception as e:
+        return f"Failed to open Task Manager: {str(e)}"
+
+# Tool to open Microsoft Store
+@tool
+def open_microsoft_store() -> str:
+    """Opens Microsoft Store."""
+    try:
+        os.system("start ms-store:")
+        return "IRIS <-- Opening Microsoft Store..."
+    except Exception as e:
+        return f"Failed to open Microsoft Store: {str(e)}"
+
+# Tool to open Microsoft Word
+@tool
+def open_word() -> str:
+    """Opens Microsoft Word."""
+    try:
+        os.system("start winword")
+        return "IRIS <-- Opening Microsoft Word..."
+    except Exception as e:
+        return f"Failed to open Microsoft Word: {str(e)}"
+
+# Tool to open Microsoft PowerPoint
+@tool
+def open_ppt() -> str:
+    """Opens PowerPoint."""
+    try:
+        os.system("start powerpnt")
+        return "IRIS <-- Opening PowerPoint..."
+    except Exception as e:
+        return f"Failed to open PowerPoint: {str(e)}"
+
+# Tool to open Microsoft Excel
+@tool
+def open_excel() -> str:
+    """Opens Excel."""
+    try:
+        os.system("start excel")
+        return "IRIS <-- Opening Excel..."
+    except Exception as e:
+        return f"Failed to open Excel: {str(e)}"
+
+# Tool to close an application (e.g., Word, Excel)
+@tool
+def close_application(application_name: str) -> str:
+    """Closes a specified application by name."""
+    try:
+        os.system(f'taskkill /f /im {application_name}')
+        return f"IRIS <-- Closing {application_name}..."
+    except Exception as e:
+        return f"Failed to close {application_name}: {str(e)}" 

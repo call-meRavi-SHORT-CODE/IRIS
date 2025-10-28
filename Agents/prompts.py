@@ -8,6 +8,14 @@ Available tools:
   3. close_browser — Closes the browser (Microsoft Edge in this case).
   4. open_notepad — Opens Notepad.
   5. open_calculator — Opens Calculator.
+  6. open_file_explorer — Opens File Explorer.
+  7. open_settings — Opens Windows Settings.
+  8. open_task_manager — Opens Task Manager.
+  9. open_microsoft_store — Opens the Microsoft Store.
+  10. open_word — Opens Microsoft Word.
+  11. open_ppt — Opens Microsoft PowerPoint.
+  12. open_excel — Opens Microsoft Excel.
+  13. close_application — Closes a specified application (e.g., Word, Excel).
 
 
 Guidelines for using tools:
