@@ -4,7 +4,7 @@ from langchain.tools import tool
 from typing import Any, Dict
 from typing import List, Literal
 from langchain_google_genai import ChatGoogleGenerativeAI
-from tools import open_google
+from tools import open_google,open_youtube,open_notepad,open_calculator,close_browser
 from prompts import system_prompt
 
 
@@ -18,7 +18,7 @@ GOOGLE_API_KEY = "AIzaSyAnPL4zvdny1jVeaikGJZz4JDL_5q11aSA"
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=GOOGLE_API_KEY)
 
 
-tools = [open_google]
+tools = [open_google,open_calculator,open_notepad,open_youtube,close_browser]
 
 
 IRIS = create_react_agent(model=llm,tools=tools,prompt=system_prompt)
@@ -30,4 +30,4 @@ def run_agent(question: str):
         msg.pretty_print()
 
 if __name__ == "__main__":
-    run_agent("open google")
+    run_agent("IRIS Open notebook")
