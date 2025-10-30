@@ -136,6 +136,29 @@ def close_application(application_name: str) -> str:
     except Exception as e:
         return f"Failed to close {application_name}: {str(e)}" 
 
+
+
+# Tool to control volume (volume up)
+@tool
+def volume_up() -> str:
+    """Increases the system volume."""
+    try:
+        for _ in range(10):  # Repeat volume up command multiple times
+            pyautogui.press("volumeup")
+        return "IRIS <-- Volume increased."
+    except Exception as e:
+        return f"Failed to increase volume: {str(e)}"
+
+# Tool to control volume (volume down)
+@tool
+def volume_down() -> str:
+    """Decreases the system volume."""
+    try:
+        for _ in range(10):  # Repeat volume down command multiple times
+            pyautogui.press("volumedown")
+        return "IRIS <-- Volume decreased."
+    except Exception as e:
+        return f"Failed to decrease volume: {str(e)}"
 # Tool to set screen brightness
 @tool
 def set_brightness(brightness_level: int) -> str:
@@ -159,29 +182,7 @@ def take_screenshot(filename: str) -> str:
         return f"IRIS <-- Screenshot saved as {filename}.png"
     except Exception as e:
         return f"Failed to take screenshot: {str(e)}"
-
-# Tool to control volume (volume up)
-@tool
-def volume_up() -> str:
-    """Increases the system volume."""
-    try:
-        for _ in range(10):  # Repeat volume up command multiple times
-            pyautogui.press("volumeup")
-        return "IRIS <-- Volume increased."
-    except Exception as e:
-        return f"Failed to increase volume: {str(e)}"
-
-# Tool to control volume (volume down)
-@tool
-def volume_down() -> str:
-    """Decreases the system volume."""
-    try:
-        for _ in range(10):  # Repeat volume down command multiple times
-            pyautogui.press("volumedown")
-        return "IRIS <-- Volume decreased."
-    except Exception as e:
-        return f"Failed to decrease volume: {str(e)}"
-
+        
 # Tool to mute the system volume
 @tool
 def mute() -> str:
@@ -190,4 +191,5 @@ def mute() -> str:
         pyautogui.press("volumemute")
         return "IRIS <-- Volume muted."
     except Exception as e:
+
         return f"Failed to mute volume: {str(e)}"
