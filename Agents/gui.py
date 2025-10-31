@@ -24,7 +24,6 @@ from app import run_agent_collect
 
 class IrisGUI:
     def __init__(self) -> None:
-        # Configure appearance for CustomTkinter; harmless for std tkinter
         if hasattr(ctk, "set_appearance_mode"):
             ctk.set_appearance_mode("dark")
         if hasattr(ctk, "set_default_color_theme"):
