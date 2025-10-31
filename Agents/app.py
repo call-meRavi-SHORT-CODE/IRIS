@@ -31,5 +31,19 @@ def run_agent(question: str):
         msg = step['messages'][-1]
         msg.pretty_print()
 
+def run_agent_collect(question: str) -> str:
+    """Run the agent and return a concatenated textual transcript of the stream.
+
+    This is useful for UIs that need a string result rather than printing.
+    """
+    inputs = {"messages": [("user", question)]}
+    transcript_parts = []
+    for step in IRIS.stream(inputs, stream_mode="values"):
+        msg = step["messages"][-1]
+        # Fallback to str(msg) if content attribute is missing
+        content = getattr(msg, "content", None)
+        transcript_parts.append(content if isinstance(content, str) else str(msg))
+    return "\n".join(part for part in transcript_parts if part)
+
 if __name__ == "__main__":
     run_agent("IRIS volume up")
